@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="description" content="Cервис по инвестиционной аналитике">
+	<meta name="keywords" content="Инвестирование">
+	<meta name="vievport" content="width=device-width, initial-scale=1">
+	<title>Troveboard</title>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Main Stylesheets-->
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!--Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5NFBFXK');</script>
+<!-- End Google Tag Manager -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NFBFXK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Modal Registration HTML -->
+<div id="regModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<div class="dialog-content">
+					<div class="registration-form">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+
+								<form method="post" name="contactform">
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<label class="sr-only">Email</label>
+												<input type="text" name="r-form-1-email" placeholder="Email">
+											</div>
+											<div class="form-group">
+												<label class="sr-only">Пароль</label>
+												<input type="text" name="r-form-1-name" placeholder="Пароль">
+											</div>
+										</div>
+										<div class="col-md-5">
+											<div class="g-recaptcha" data-sitekey="6LfSHlQUAAAAAMjBVKO0h3_WJl3rqMv4LPKbGbgh"></div>
+										</div>
+										<div class="col-md-4">
+											<button type="submit" value="Submit" class="btn-reg">
+												Зарегистрироваться
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="paragraf-info text-center">
+								<p>Зарегистрировав аккаунт,<br/>вы принимаете<br/><a href="#">пользовательское<br/>соглашение.</a></p>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn btn-default btn-modal" data-dismiss="modal">X</button>
+				</div>
+		</div>
+	</div>
+</div>
+<!-- Modal Login HTML -->
+<div id="logModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<div class="dialog-content">
+					<div class="registration-form">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<form method="post" name="contactform" id="registrationForm">
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<label class="sr-only">Email</label>
+												<input type="text" name="r-form-1-email" placeholder="Email">
+											</div>
+											<div class="form-group">
+												<label class="sr-only">Пароль</label>
+												<input type="text" name="r-form-1-name" placeholder="Пароль">
+											</div>
+										</div>
+										<div class="col-md-5">
+											<div class="g-recaptcha" data-sitekey="6LfSHlQUAAAAAMjBVKO0h3_WJl3rqMv4LPKbGbgh"></div>
+										</div>
+										<div class="col-md-4">
+											<button type="submit" value="Submit" class="btn-reg">
+												Войти
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="paragraf-info text-center">
+								<p>Используя сервис, вы<br/>принимаете<br/><a href="#">пользовательское<br/>соглашение.</a></p>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn btn-default btn-modal" data-dismiss="modal">X</button>
+				</div>
+		</div>
+	</div>
+</div>
+<header>
+	<div class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-sm-10">
+							<a href="index.html" class="navbar-logo">
+								<img src="images/main/troveboard.png" alt="logo">
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="search-info" href="#"><img class="search-icon" src="images/main/search.png" alt="search"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<ul class="form-in">
+						<li><a class="btn-registration" href="#regModal" data-toggle="modal">Зарегистрироваться</a></li>
+						<li><a class="btn-in" href="#logModal" data-toggle="modal">Войти</a></li>
+						<li>
+							<a class="btn-lang" href="#">RU <img src="images/main/list.png"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="main-menu">
+		<ul class="topmenu">
+			<li>
+				<a href="/service.html">Сервис</a>
+			</li>
+			<li>
+				<a href="/service.html">Решение</a>
+				
+			</li>
+			<li>
+				<a href="/price.html">Цена</a>
+			</li>
+			<li>
+				<a href="/about.html">Компания</a>
+				<ul class="submenu">
+					<li><a href="/about.html">О компании</a></li>
+					<li><a href="/about.html">История</a></li>
+					<li><a href="/contact.html">Контакты</a></li>
+					<li><a href="/about.html">Реклама</a></li>
+					<li><a href="/vacancies.html">Карьера</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>
+<div class="main_about-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>О компании</h1>
+			</div>
+		</div>
+	</div>
+	<div class="backstretch" style="top:0; left:0; overflow: hidden;"></div>
+</div>
+<div class="block-content-wight whowe_inf">
+	<section class="container">
+		<p class="title-block-inform">Кто мы</p>
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<p>TROVEBOARD – это платформа инвестиционной аналитики для самых популярных видов инвестиций – акций, валют, криптовалют и недвижимости.</p>
+				<p>Вся статистика о разных типах инвестициях находится в одном месте, что поможет инвесторам по всему миру принимать правильные решения, основываясь на фундаментальном анализе финансовых показателей, собственного финансового положения и трендов, подтвержденных статистикой.</p>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<figure>
+					<img src="./images/about/who_we.png" alt="" />
+				</figure>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="block-content-wight">
+	<section class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-4">
+				<div class="service">
+					<figure>
+						<img src="images/about/icn_1.png" alt="all-in-one">
+						<figcaption>Надежность</figcaption>
+					</figure>
+					<p>
+						С нами удобно работать.<br/> Мы всегда на связи
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="service">
+					<figure>
+						<img src="images/about/icn_2.png" alt="auto-info">
+						<figcaption>Преимущества</figcaption>
+					</figure>
+					<p>
+						Управляйте денежными средствами легко
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="service">
+					<figure>
+						<img src="images/about/icon_3.png" alt="uchet">
+						<figcaption>Удобство</figcaption>
+					</figure>
+					<p>
+						Наши тарифные планы подходят для любого бизнеса
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="block-inform">
+	<section class="container">
+		<h3 class="title-block-inform">Инвесторам</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="features-container text-center">
+					<img src="images/about/icn_4.png" alt="uchet">
+					<p>
+						Если вас интересует<br/> сотрудничество, отправьте<br/> сообщение нам на почту
+					</p>
+					<a href="#" class="btn-main">Написать письмо</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="block-content-wight">
+	<section class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-head">
+					<p class="title-block-inform">Контакты</p>
+				</div>
+			</div>
+		</div>
+		<div class="content-brief">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<p>
+						Нам можно написать письмо по почте <span class="email-style">hi@troveboard.com</span>,<br/>
+						сообщение в телеграм <span class="email-style">@dirzstat</span>.<br/>
+						или отправить текст по форме.
+
+					</p>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="contactform">
+						<form method="post" name="contactform" id="contactform">
+							<div class="form-group">
+								<label class="sr-only">Имя</label>
+								<input type="text" name="r-form-1-name" placeholder="Имя" id="form-name">
+							</div>
+							<div class="form-group">
+								<label class="sr-only">Фамилия</label>
+								<input type="text" name="r-form-1-name" placeholder="Фамилия" id="form-surname">
+							</div>
+							<div class="form-group">
+								<label class="sr-only">Email</label>
+								<input type="text" name="r-form-1-email" placeholder="Email" id="form-email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only">Вопрос</label>
+								<input type="text" name="r-form-1-name" placeholder="Вопрос" id="form-question">
+							</div>
+
+								<button type="submit" class="submit-btn" id="submit" value="Submit">
+									Отправить сообщение
+								</button>
+						</form>
+						<p>
+							Нажимая на кнопку, Вы соглашаетесь на обработку
+							персональных данных в соответствии с <span>Условиями</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="block-inform">
+	<section class="container">
+		<h3 class="title-block-inform">Реклама</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="features-container text-center">
+					<img src="images/about/icn_5.png" alt="uchet">
+					<p>
+						Хотите разместить рекламу<br/> на нашем сайте? Отправьте<br/> нам сообщение
+					</p>
+					<a href="#" class="btn-main">Узнать подробности</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="get">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 form">
+				<div class="get-block-title">
+					Получите комплексное решение<br/> для ваших инвестиций
+				</div>
+				<form class="order_form" action="/action_page.php">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="sr-only">Имя</label>
+								<input type="text" name="name" placeholder="Имя" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="sr-only">E-mail</label>
+								<input type="text" name="email" placeholder="E-mail" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<button type="submit" class="submit-send" value="Submit">Заказать пробную версию</button>
+						</div>
+					</div>
+				</form>
+				<h6>
+					<ins>
+						Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
+					</ins>
+				</h6>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-sm-6">
+				<div class="row">
+					<div class="col-md-4">
+						<h4><a href="/service.html">Сервис</a></h4>
+					</div>
+					<div class="col-md-4">
+						<h4><a href="/service.html">Решение</a></h4>
+					</div>
+					<div class="col-md-4">
+						<h4><a href="/price.html">Стоимость услуг</a></h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-6">
+				<div class="row">
+					<div class="col-md-4">
+						<h4>Компания</h4>
+						<ul>
+							<li><a href="/about.html">О компании</a></li>
+							<li><a href="/about.html">История</a></li>
+							<li><a href="/contact.html">Контакты</a></li>
+							<li><a href="/about.html">Реклама</a></li>
+							<li><a href="/vacancies.html">Карьера</a></li>
+						</ul>
+					</div>
+					<div class="col-md-8">
+						<ul class="polconf">
+							<li><a href="/policy.html">Политика конфиденциальности</a></li>
+							<li><a href="/terms.html">Пользовательское соглашение</a></li>
+							<li><a href="/sitemap.html">Карта сайта</a></li>
+						</ul>
+						<h4 class="copyright">ALL RIGHTS RESERVED.<br/>COPYRIGHT © 2018 <span>Troveboard</span></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+<script src="js/jquery.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/scripts.js"></script>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="description" content="Cервис по инвестиционной аналитике">
+	<meta name="keywords" content="Инвестирование">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Troveboard</title>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Main Stylesheets-->
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!--Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5NFBFXK');</script>
+<!-- End Google Tag Manager -->
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NFBFXK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Preloader -->
+<div class="preload-section">
+	<div class="load-content">
+		<div class="thecube">
+			<div class="cube c1"></div>
+			<div class="cube c2"></div>
+			<div class="cube c4"></div>
+			<div class="cube c3"></div>
+		</div>
+        <p>Загрузка Страницы</p>
+	</div>
+</div>
+
+<!-- Modal Registration HTML -->
+<div id="regModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<div class="dialog-content">
+					<div class="registration-form">
+								<form method="post" id="registrationForm">
+									<div class="row">
+										<div class="col-md-7">
+											<div class="form-group">
+												<label class="sr-only">Email</label>
+												<input type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required"
+													   data-error="Valid email is required." id="reg_email">
+												<div class="help-block with-errors"></div>
+											</div>
+											<div class="form-group">
+												<label class="sr-only">Пароль</label>
+												<input type="password" class="form-control" name="password" id="reg_pass" placeholder="Пароль">
+											</div>
+
+											<div class="g-recaptcha" data-sitekey="6LfSHlQUAAAAAMjBVKO0h3_WJl3rqMv4LPKbGbgh"></div>
+										</div>
+										<div class="col-md-5">
+											<button value="Submit" id="btnSubmit" class="btn-reg">
+												Зарегистрироваться
+											</button>
+										</div>
+									</div>
+								</form>
+
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="paragraf-info text-center">
+								<p>Зарегистрировав аккаунт, вы принимаете<br/><a href="#">пользовательское соглашение.</a></p>
+							</div>
+						</div>
+					</div>
+				<button type="button" class="btn btn-default btn-modal" data-dismiss="modal">X</button>
+				</div>
+		</div>
+	</div>
+</div>
+<!-- Modal Login HTML -->
+<div id="logModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<div class="dialog-content">
+					<div class="registration-form">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<form method="post" name="contactform" id="logForm">
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<label class="sr-only">Email</label>
+												<input type="text" name="r-form-1-email" placeholder="Email">
+											</div>
+											<div class="form-group">
+												<label class="sr-only">Пароль</label>
+												<input type="text" name="r-form-1-name" placeholder="Пароль">
+											</div>
+										</div>
+										<div class="col-md-5">
+											<div class="g-recaptcha" data-sitekey="6LfSHlQUAAAAAMjBVKO0h3_WJl3rqMv4LPKbGbgh"></div>
+										</div>
+										<div class="col-md-4">
+											<button type="submit" id="regr" value="Submit" class="btn-reg">
+												Войти
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="paragraf-info text-center">
+								<p>Используя сервис, вы<br/>принимаете<br/><a href="#">пользовательское<br/>соглашение.</a></p>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn btn-default btn-modal" data-dismiss="modal">X</button>
+				</div>
+		</div>
+	</div>
+</div>
+<header>
+	<div class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-sm-10">
+							<a href="index.html" class="navbar-logo">
+								<img src="images/main/troveboard.png" alt="logo">
+							</a>
+						</div>
+						<div class="col-sm-2">
+							<a class="search-info" href="#"><img class="search-icon" src="images/main/search.png" alt="search"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<ul class="form-in">
+						<li><a class="btn-registration" href="#regModal" data-toggle="modal">Зарегистрироваться</a></li>
+						<li><a class="btn-in" href="#logModal" data-toggle="modal">Войти</a></li>
+						<li>
+							<a class="btn-lang" href="#">RU <img src="images/main/list.png"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="main-menu">
+		<ul class="topmenu">
+			<li>
+				<a href="/service.html">Сервис</a>
+			</li>
+			<li>
+				<a href="/service.html">Решение</a>
+
+			</li>
+			<li>
+				<a href="/price.html">Цена</a>
+			</li>
+			<li>
+				<a href="/about.html">Компания</a>
+				<ul class="submenu">
+					<li><a href="/about.html">О компании</a></li>
+					<li><a href="/about.html">История</a></li>
+					<li><a href="/contact.html">Контакты</a></li>
+					<li><a href="/about.html">Реклама</a></li>
+					<li><a href="/vacancies.html">Карьера</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>
+<div class="top-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Анализируйте и зарабатывайте</h1>
+				<h2>Рассчитайте свои операции по акциям,<br/>валютам, криптовалютам и недвижимости</h2>
+				<a class="btn-try" href="#regModal" data-toggle="modal">Попробовать бесплатно</a>
+			</div>
+		</div>
+	</div>
+	<div class="backstretch" style="top:0; left:0; overflow: hidden;"></div>
+</div>
+<div class="block-content-wight">
+	<section class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-4">
+				<div class="service">
+					<img src="images/main/all-in-one.png" alt="all-in-one">
+					<p>
+						Вся инвестиционная<br/> аналитика в одном месте:<br/> акции, валюта, криптовалюта,<br/> недвижимость
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="service">
+					<img src="images/main/auto-info.png" alt="auto-info">
+					<p>
+						Автоматизированная подача информации о ваших инвестиционных операциях
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="service">
+					<img src="images/main/uchet.png" alt="uchet">
+					<p>
+						Прогнозные модели и учет доходности вашего<br/> портфеля
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="get">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 form">
+				<div class="get-block-title">
+					Получите комплексное решение<br/> для ваших инвестиций
+				</div>
+				<form class="order_form" action="/action_page.php">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="sr-only">Имя</label>
+								<input type="text" name="name" placeholder="Имя" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="sr-only">E-mail</label>
+								<input type="text" name="email" placeholder="E-mail" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<button type="submit" class="submit-send" value="Submit">Заказать пробную версию</button>
+						</div>
+					</div>
+				</form>
+				<h6>
+					<ins>
+						Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
+					</ins>
+				</h6>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-sm-6">
+				<div class="row">
+					<div class="col-md-4">
+						<h4><a href="/service.html">Сервис</a></h4>
+					</div>
+					<div class="col-md-4">
+						<h4><a href="/service.html">Решение</a></h4>
+
+					</div>
+					<div class="col-md-4">
+						<h4><a href="/price.html">Стоимость услуг</a></h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-6">
+				<div class="row">
+					<div class="col-md-4">
+						<h4>Компания</h4>
+						<ul>
+							<li><a href="/about.html">О компании</a></li>
+							<li><a href="/about.html">История</a></li>
+							<li><a href="/contact.html">Контакты</a></li>
+							<li><a href="/about.html">Реклама</a></li>
+							<li><a href="/vacancies.html">Карьера</a></li>
+						</ul>
+					</div>
+					<div class="col-md-8">
+						<ul class="polconf">
+							<li><a href="/policy.html">Политика конфиденциальности</a></li>
+							<li><a href="/terms.html">Пользовательское соглашение</a></li>
+							<li><a href="/sitemap.html">Карта сайта</a></li>
+						</ul>
+						<h4 class="copyright">ALL RIGHTS RESERVED.<br/>COPYRIGHT © 2018 <span>Troveboard</span></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+<script src="js/jquery.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/scripts.js"></script>
+</html>
